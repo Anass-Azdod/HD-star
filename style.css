@@ -202,6 +202,9 @@ a {
 .category-card h3 {
     font-size: 18px;
 }
+.product-name{
+    height: 3rem;
+}
 
 .category-card span {
     font-size: 14px;
@@ -228,10 +231,14 @@ a {
 }
 
 .product-card {
+    
+    display: block;
+    color: inherit;
     overflow: hidden;
     border: 1px solid #eee;
     border-radius: 10px;
     background: white;
+
 }
 
 .product-image {
