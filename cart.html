@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>السلة | HD Start</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+
+    <script src="script.js" defer></script>
+    <script src="cart.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                HD <span>Start</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+            </div>
+
+            <a href="cart.html" class="cart">
+                السلة
+            </a>
+
+            <button class="menu-btn">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="cart-section">
+
+            <div class="section-header">
+                <p class="section-label">سلتك</p>
+                <h1>سلة التسوق</h1>
+            </div>
+
+
+            <div class="cart-content">
+
+                <div class="cart-items" id="cartItems">
+                    <!-- سيتم إضافة المنتجات باستخدام JavaScript -->
+                </div>
+
+
+                <div class="cart-summary">
+
+                    <h2>ملخص الطلب</h2>
+
+                    <div class="summary-row">
+                        <span>المجموع الفرعي</span>
+                        <span id="cartSubtotal">0 DH</span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>المجموع</span>
+                        <span id="cartTotal">0 DH</span>
+                    </div>
+
+                    <button class="whatsapp-btn" id="whatsappOrder">
+                        الطلب عبر واتساب
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

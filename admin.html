@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD Star Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <div class="admin-shell">
+        <aside class="sidebar" id="sidebar">
+            <a class="admin-logo" href="index.html" aria-label="HD Star home">HD <span>Star</span></a>
+
+            <nav class="side-nav" aria-label="Admin navigation">
+                <a class="nav-item active" href="#overview"><span class="nav-icon">⌂</span>نظرة عامة</a>
+                <a class="nav-item" href="#products"><span class="nav-icon">▦</span>المنتجات</a>
+                <a class="nav-item" href="#orders"><span class="nav-icon">□</span>الطلبات</a>
+                <a class="nav-item" href="#categories"><span class="nav-icon">◇</span>الفئات</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a class="store-link" href="index.html">↗ عرض المتجر</a>
+                <button class="sign-out" type="button">تسجيل الخروج</button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+                <div>
+                    <p class="eyebrow">HD STAR · ADMIN</p>
+                    <h1>لوحة التحكم</h1>
+                </div>
+                <div class="admin-user">
+                    <div class="avatar">A</div>
+                    <div><strong>Admin</strong><small>مدير المتجر</small></div>
+                </div>
+            </header>
+
+            <section class="welcome" id="overview">
+                <div>
+                    <p class="eyebrow">نظرة عامة</p>
+                    <h2>مرحباً بك، Admin</h2>
+                    <p>تابع أداء متجرك وإدارة المنتجات من مكان واحد.</p>
+                </div>
+                <button class="add-product-btn" type="button">+ إضافة منتج</button>
+            </section>
+
+            <section class="stats-grid" aria-label="Store statistics">
+                <article class="stat-card"><div class="stat-icon green">▦</div><div><p>إجمالي المنتجات</p><strong>0</strong><span>ستظهر بعد الربط</span></div></article>
+                <article class="stat-card"><div class="stat-icon blue">□</div><div><p>الطلبات الجديدة</p><strong>0</strong><span>ستظهر بعد الربط</span></div></article>
+                <article class="stat-card"><div class="stat-icon orange">!</div><div><p>مخزون منخفض</p><strong>0</strong><span>ستظهر بعد الربط</span></div></article>
+                <article class="stat-card"><div class="stat-icon purple">DH</div><div><p>إجمالي المبيعات</p><strong>0 DH</strong><span>ستظهر بعد الربط</span></div></article>
+            </section>
+
+            <section class="panel" id="products">
+                <div class="panel-header">
+                    <div><h2>المنتجات</h2><p>أحدث المنتجات في متجرك</p></div>
+                    <a href="#products" class="text-link">عرض الكل ←</a>
+                </div>
+                <div class="empty-products">
+                    <div class="empty-icon">▦</div>
+                    <h3>لا توجد منتجات بعد</h3>
+                    <p>أضف أول منتج ليظهر هنا وفي واجهة المتجر.</p>
+                    <button class="outline-add" type="button">+ إضافة أول منتج</button>
+                </div>
+            </section>
+
+            <section class="two-column">
+                <section class="panel compact-panel" id="orders">
+                    <div class="panel-header"><div><h2>الطلبات الأخيرة</h2><p>آخر نشاط للطلبات</p></div></div>
+                    <div class="empty-row"><span>□</span><p>لا توجد طلبات حتى الآن.</p></div>
+                </section>
+                <section class="panel compact-panel" id="categories">
+                    <div class="panel-header"><div><h2>الفئات</h2><p>تنظيم منتجاتك</p></div></div>
+                    <div class="empty-row"><span>◇</span><p>أضف فئات عند ربط البيانات.</p></div>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

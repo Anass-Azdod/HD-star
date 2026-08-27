@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Product | HD Start</title>
+    <title>المنتج | HD Start</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.css">
     <script src="script.js" defer></script>
+    <script src="product.js" defer></script>
 
 </head>
 
@@ -22,17 +23,15 @@
                 HD <span>Start</span>
             </a>
 
-            
-
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
             </div>
 
             <a href="cart.html" class="cart">
-                Cart
+                السلة
             </a>
             <button class="menu-btn">
                 ☰
@@ -48,11 +47,35 @@
 
             <div class="product-gallery">
 
-                <img
-                    src="download.jpg"
-                    alt="Wireless Earbuds"
-                    class="main-product-image"
-                >
+                <div class="main-image">
+                    <img
+                        src="download.jpg"
+                        alt="سماعات أذن لاسلكية"
+                        id="mainProductImage"
+                    >
+                </div>
+
+                <div class="thumbnail-list">
+
+                    <img
+                        src="Bubble-Skincare-4-Step-Morning-Routine-Bundle-for-Normal-to-Rise-Shine-Set-Slam-Dunk-Skin-Everyday-Care-Unisex-set-of-4_da755326-4b66-43a4-91ed-c96b7ba3a776.04eb1264b6f6180863132e737c0d03d3.avif"
+                        alt="سماعات أذن لاسلكية"
+                        class="thumbnail active"
+                    >
+
+                    <img
+                        src="download.jpg"
+                        alt="سماعات أذن لاسلكية"
+                        class="thumbnail"
+                    >
+
+                    <img
+                        src="img.pg.jpeg"
+                        alt="سماعات أذن لاسلكية"
+                        class="thumbnail"
+                    >
+
+                </div>
 
             </div>
 
@@ -60,27 +83,27 @@
             <div class="product-info">
 
                 <p class="product-category">
-                    Earbuds
+                    سماعات الأذن
                 </p>
 
                 <h1>
-                    Wireless Earbuds
+                    سماعات أذن لاسلكية
                 </h1>
 
                 <p class="product-price">
-                    45 MAD
+                    45 DH
                 </p>
 
                 <p class="product-description">
-                    High-quality wireless earbuds with a compact
-                    design and reliable sound.
+                    سماعات أذن لاسلكية عالية الجودة بتصميم مدمج
+                    وصوت موثوق.
                 </p>
 
 
                 <div class="quantity">
 
                     <label for="quantity">
-                        Quantity
+                        الكمية
                     </label>
 
                     <input
@@ -93,8 +116,8 @@
                 </div>
 
 
-                <button class="add-cart-btn">
-                    Add to Cart
+                <button class="add-cart-btn" id="addCartBtn">
+                    أضف إلى السلة
                 </button>
 
             </div>
@@ -102,7 +125,6 @@
         </section>
 
     </main>
-
 
 
 </body>
