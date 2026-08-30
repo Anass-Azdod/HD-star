@@ -24,6 +24,7 @@ async function loadproducts() {
     }
     
     let productDiv = document.querySelector(".product-grid")
+    productDiv.replaceChildren()
 
     let categories = {}
 
@@ -44,9 +45,8 @@ async function loadproducts() {
             title.classList.add("category-title")
             title.textContent = product.category
             
-            productDiv.append(title)
-
             categories[category] = categorydiv
+            categorydiv.append(title)
             productDiv.append(categorydiv)
             
         }
@@ -83,21 +83,16 @@ async function loadproducts() {
               })
             }
             localStorage.setItem("cart", JSON.stringify(cart))
-            cartbtn.style.backgroundColor = " white"
-            cartbtn.style.color = "black"
+            cartbtn.classList.add("added")
+            cartbtn.textContent = "تمت الإضافة ✓"
         })
 
             productImg.append(imgtag)
         productElements.append( productImg,h2tag,pricetag,cartbtn ) 
         categories[category].append(productElements) 
-        // main.append(productDiv)
-
-        let product = document.querySelectorAll(".product-card");
-        product.forEach(product => {
-        product.addEventListener("click",()=>{
-            let id = product.dataset.id
+        productElements.addEventListener("click",()=>{
+            let id = productElements.dataset.id
             window.location.href = `product.html?id=${id}`;  
-    })
         })
     })
 }
