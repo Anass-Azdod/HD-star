@@ -142,3 +142,6 @@
     }
 
 }
+
+.add-cart-btn:disabled { opacity: .55; cursor: wait; }
+.product-message { min-height: 20px; margin: 13px 0 0; color: #287044; font-size: 13px; }.product-message.error { color: #a12b2b; }

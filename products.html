@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات | HD Star</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <script src="products.js" defer type="module"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">HD <span>Star</span></a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a class="current-page" href="products.html">المنتجات</a>
+                <a href="index.html#about">من نحن</a>
+                <a href="index.html#contact">اتصل بنا</a>
+            </div>
+            <a href="cart.html" class="cart">السلة</a>
+            <button class="menu-btn" type="button" aria-label="Open menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-hero">
+            <div>
+                <p class="products-kicker">كتالوج الجملة</p>
+                <h1>كل المنتجات</h1>
+                <p>اكتشف تشكيلتنا من الإلكترونيات والمنتجات اليومية بأسعار مناسبة للتجار.</p>
+            </div>
+            <a class="hero-cart-link" href="cart.html">عرض السلة <span>→</span></a>
+        </section>
+
+        <section class="catalog-layout" aria-label="Products catalogue">
+            <aside class="catalog-sidebar">
+                <div class="sidebar-heading"><h2>الفئات</h2><button id="clear-filters" type="button">مسح الكل</button></div>
+                <nav class="category-filter-list" id="category-filters" aria-label="تصنيف المنتجات"></nav>
+
+                <div class="catalog-help">
+                    <span class="help-icon">?</span>
+                    <div><strong>هل تبحث عن منتج معين؟</strong><p>تواصل معنا وسنساعدك.</p><a href="index.html#contact">اتصل بنا ←</a></div>
+                </div>
+            </aside>
+
+            <section class="catalog-content" id="all-products">
+                <div class="catalog-toolbar">
+                    <p id="products-result-count"><strong>0</strong> منتجاً متاحاً</p>
+                    <label class="catalog-search"><span>⌕</span><input id="product-search" type="search" placeholder="ابحث عن منتج"></label>
+                    <label class="sort-control">ترتيب حسب
+                        <select id="product-sort" aria-label="ترتيب المنتجات">
+                            <option value="newest">الأحدث</option>
+                            <option value="price-asc">السعر: من الأقل للأعلى</option>
+                            <option value="price-desc">السعر: من الأعلى للأقل</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

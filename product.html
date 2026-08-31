@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>المنتج | HD Start</title>
+    <title>المنتج | HD Star</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="product.css">
-    <script src="script.js" defer></script>
-    <script src="product.js" defer></script>
+    <script src="product.js" defer type="module"></script>
 
 </head>
 
@@ -20,14 +19,14 @@
         <nav class="navbar">
 
             <a href="index.html" class="logo">
-                HD <span>Start</span>
+                HD <span>Star</span>
             </a>
 
             <div class="nav-links">
                 <a href="index.html">الرئيسية</a>
                 <a href="products.html">المنتجات</a>
-                <a href="about.html">من نحن</a>
-                <a href="contact.html">اتصل بنا</a>
+                <a href="index.html#about">من نحن</a>
+                <a href="index.html#contact">اتصل بنا</a>
             </div>
 
             <a href="cart.html" class="cart">
@@ -46,58 +45,17 @@
         <section class="product-details">
 
             <div class="product-gallery">
-
-                <div class="main-image">
-                    <img
-                        src="download.jpg"
-                        alt="سماعات أذن لاسلكية"
-                        id="mainProductImage"
-                    >
-                </div>
-
-                <div class="thumbnail-list">
-
-                    <img
-                        src="Bubble-Skincare-4-Step-Morning-Routine-Bundle-for-Normal-to-Rise-Shine-Set-Slam-Dunk-Skin-Everyday-Care-Unisex-set-of-4_da755326-4b66-43a4-91ed-c96b7ba3a776.04eb1264b6f6180863132e737c0d03d3.avif"
-                        alt="سماعات أذن لاسلكية"
-                        class="thumbnail active"
-                    >
-
-                    <img
-                        src="download.jpg"
-                        alt="سماعات أذن لاسلكية"
-                        class="thumbnail"
-                    >
-
-                    <img
-                        src="img.pg.jpeg"
-                        alt="سماعات أذن لاسلكية"
-                        class="thumbnail"
-                    >
-
-                </div>
-
+                <div class="main-image"><img src="" alt="" id="mainProductImage"></div>
+                <div class="thumbnail-list" id="thumbnail-list"></div>
             </div>
 
 
             <div class="product-info">
 
-                <p class="product-category">
-                    سماعات الأذن
-                </p>
-
-                <h1>
-                    سماعات أذن لاسلكية
-                </h1>
-
-                <p class="product-price">
-                    45 DH
-                </p>
-
-                <p class="product-description">
-                    سماعات أذن لاسلكية عالية الجودة بتصميم مدمج
-                    وصوت موثوق.
-                </p>
+                <p class="product-category" id="product-category">جارٍ التحميل...</p>
+                <h1 id="product-name">جارٍ تحميل المنتج</h1>
+                <p class="product-price" id="product-price">—</p>
+                <p class="product-description" id="product-description"></p>
 
 
                 <div class="quantity">
@@ -116,9 +74,11 @@
                 </div>
 
 
-                <button class="add-cart-btn" id="addCartBtn">
+                <button class="add-cart-btn" id="addCartBtn" disabled>
                     أضف إلى السلة
                 </button>
+
+                <p class="product-message" id="product-message" aria-live="polite"></p>
 
             </div>
 

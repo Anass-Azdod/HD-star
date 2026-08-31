@@ -139,6 +139,19 @@ function renderCart(cart) {
     cartTotal.textContent = formatPrice(total);
 }
 
+function sendWhatsAppOrder() {
+    const cart = mergeCartItems(readCart());
+    if (!cart.length) {
+        window.alert('سلتك فارغة حالياً.');
+        return;
+    }
+
+    const lines = cart.map((item) => `- ${item.name || 'منتج'} ×  ${normalizeQuantity(item.quantity)}= ${formatPrice(numberPrice(item.price) * normalizeQuantity(item.quantity))}`);
+    const total = cart.reduce((sum, item) => sum + (numberPrice(item.price) * normalizeQuantity(item.quantity)), 0);
+    const message = ['مرحباً، أريد طلب المنتجات التالية:', '', ...lines, '', `المجموع: ${formatPrice(total)}`].join('\n');
+    window.open(`https://wa.me/212696526127?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+}
+
 async function loadCart() {
     const cart = mergeCartItems(readCart());
     const productIds = cart.map((item) => item.id).filter((id) => id !== undefined && id !== null);
@@ -171,5 +184,6 @@ async function loadCart() {
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 menuBtn?.addEventListener('click', () => navLinks?.classList.toggle('active'));
+document.querySelector('#whatsappOrder')?.addEventListener('click', sendWhatsAppOrder);
 
 loadCart();

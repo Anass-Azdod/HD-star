@@ -224,6 +224,51 @@ a {
     padding: 60px 0;
 }
 
+.about-section,
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-section {
+    display: grid;
+    gap: 28px;
+    padding: 72px 0;
+    border-top: 1px solid #e7ece8;
+}
+
+.about-content h2,
+.contact-section h2 {
+    max-width: 570px;
+    margin: 0;
+    color: #17231b;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.1;
+}
+
+.about-content > p:not(.section-label),
+.contact-section > div > p:not(.section-label) {
+    max-width: 590px;
+    margin: 18px 0 0;
+    color: #67736a;
+    line-height: 1.75;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.about-points div { padding-left: 15px; border-left: 3px solid #247b47; }
+.about-points strong, .about-points span { display: block; }
+.about-points strong { color: #1c2a20; font-size: 14px; }.about-points span { margin-top: 4px; color: #748077; font-size: 12px; }
+.about-card { min-height: 250px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 13px; color: #fff; background: #173d25; }.about-card p { margin: 0; color: #88d4a2; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; }.about-card strong { font-size: 31px; line-height: 1.16; }.about-card > span { color: #b9dcc4; font-size: 12px; }
+.contact-section { margin-bottom: 66px; padding: 36px 30px; display: flex; flex-direction: column; gap: 26px; border-radius: 13px; background: #eff8f1; }.contact-section h2 { font-size: clamp(27px, 3.5vw, 38px); }.contact-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }.contact-primary, .contact-secondary { padding: 13px 17px; border-radius: 7px; font-size: 13px; font-weight: 700; }.contact-primary { color: #fff; background: #1b7541; }.contact-secondary { border: 1px solid #c8d8cc; color: #1b7541; background: #fff; }
+.site-footer { width: 90%; max-width: 1200px; min-height: 80px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 25px; border-top: 1px solid #e6ece7; color: #68736c; font-size: 12px; }.site-footer p { margin: 0; }.site-footer > a:last-child { margin-left: auto; color: #1b7541; font-weight: 700; }
+
 .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -409,5 +454,7 @@ a {
     .product-image {
         height: 220px;
     }
+
+    .about-section { grid-template-columns: 1.25fr .75fr; align-items: stretch; gap: 70px; }.about-points { grid-template-columns: repeat(3, 1fr); }.contact-section { padding: 46px; flex-direction: row; align-items: center; justify-content: space-between; }.contact-actions { justify-content: flex-end; }
 
 }
