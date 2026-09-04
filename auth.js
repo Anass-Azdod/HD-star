@@ -6,7 +6,7 @@ export const supabase = createClient(
 );
 
 // Replace this with the same email used in your RLS policies.
-export const ADMIN_EMAILS = ['YOUR_ADMIN_EMAIL@example.com'];
+export const ADMIN_EMAILS = ['aanass.azd@gmail.com'];
 
 export function isAdmin(user) {
     return Boolean(user?.email) && ADMIN_EMAILS.some((email) => email.toLowerCase() === user.email.toLowerCase());
