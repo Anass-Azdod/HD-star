@@ -1,9 +1,4 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-const supabase = createClient(
-    'https://gkwkorqpktidgxladvzi.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdrd2tvcnFwa3RpZGd4bGFkdnppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTYzNzAsImV4cCI6MjA4OTU5MjM3MH0.hBT4v2wUyn2KRme6dutz4cK0pApZyF9fonRb0DPyQxM'
-);
+import { requireAdmin, supabase } from './auth.js';
 
 const tableName = 'hd-store';
 const bucketName = 'hd-store';
@@ -175,4 +170,13 @@ async function loadDashboard() {
     renderProducts(products);
 }
 
-loadDashboard();
+const adminUser = await requireAdmin();
+
+if (adminUser) {
+    document.querySelector('#admin-email').textContent = adminUser.email;
+    document.querySelector('.sign-out')?.addEventListener('click', async () => {
+        await supabase.auth.signOut();
+        window.location.replace('login.html');
+    });
+    loadDashboard();
+}

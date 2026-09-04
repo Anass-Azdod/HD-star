@@ -55,6 +55,12 @@
     font-weight: 600;
 }
 
+.cart-unit-price {
+    margin: 0 0 7px;
+    color: #6b766e;
+    font-size: 12px;
+}
+
 .quantity-controls {
     display: inline-flex;
     align-items: center;

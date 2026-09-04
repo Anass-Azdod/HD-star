@@ -102,10 +102,14 @@ function createCartItem(item, index) {
     increaseButton.setAttribute('aria-label', 'Increase quantity');
     increaseButton.addEventListener('click', () => updateQuantity(index, 1));
     quantityControls.append(decreaseButton, quantity, increaseButton);
+    const unitPrice = document.createElement('p');
+    unitPrice.className = 'cart-unit-price';
+    unitPrice.textContent = `سعر القطعة: ${formatPrice(item.price)} `;
+    unitPrice.dir = "rtl"
     const price = document.createElement('p');
     price.className = 'cart-item-price';
     price.textContent = formatPrice(numberPrice(item.price) * normalizeQuantity(item.quantity));
-    info.append(name, quantityControls, price);
+    info.append(name, unitPrice, quantityControls, price);
 
     const removeButton = document.createElement('button');
     removeButton.className = 'remove-item';
