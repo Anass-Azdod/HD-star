@@ -83,19 +83,20 @@
     <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-dialog-title">
         <form class="product-form" id="product-form">
             <div class="form-header">
-                <div><p class="eyebrow">منتج جديد</p><h2 id="product-dialog-title">إضافة منتج</h2></div>
+                <div><p class="eyebrow" id="dialog-eyebrow">منتج جديد</p><h2 id="product-dialog-title">إضافة منتج</h2></div>
                 <button class="close-dialog" type="button" aria-label="Close">×</button>
             </div>
             <div class="form-grid">
                 <label>اسم المنتج<input name="name" type="text" required placeholder="مثال: شاحن سريع 20"></label>
                 <label>السعر (DH)<input name="price" type="number" min="0" step="0.01" required placeholder="0.00"></label>
                 <label>الفئة<input name="category" type="text" required placeholder="مثال: الشواحن"></label>
-                <label>الصورة الرئيسية<input name="main-image" type="file" accept="image/*" required></label>
+                <label>الصورة الرئيسية<input name="main-image" id="main-image-input" type="file" accept="image/*" required></label>
                 <label class="full-width">صور إضافية <span>(اختياري)</span><input name="extra-images" type="file" accept="image/*" multiple></label>
                 <label class="full-width">الوصف<textarea name="description" rows="4" placeholder="وصف مختصر للمنتج"></textarea></label>
+                <p class="edit-image-hint full-width" id="edit-image-hint" hidden>اترك حقول الصور فارغة للاحتفاظ بالصور الحالية.</p>
             </div>
             <p class="form-status" id="form-status" aria-live="polite"></p>
-            <div class="form-actions"><button class="cancel-dialog" type="button">إلغاء</button><button class="submit-product" type="submit">إضافة المنتج</button></div>
+            <div class="form-actions"><button class="cancel-dialog" type="button">إلغاء</button><button class="submit-product" id="submit-product-btn" type="submit">إضافة المنتج</button></div>
         </form>
     </dialog>
 </body>
