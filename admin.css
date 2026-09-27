@@ -41,7 +41,17 @@ a { color: inherit; text-decoration: none; }
 .welcome > div > p:last-child { margin: 9px 0 0; color: var(--muted); font-size: 14px; }
 .add-product-btn, .outline-add { padding: 12px 17px; border-radius: 7px; border: 1px solid var(--green); background: var(--green); color: #fff; cursor: pointer; font-weight: 700; font-size: 13px; }
 .add-product-btn:hover { background: var(--green-dark); }
-
+.edit-action{
+    background-color: #1d7a46;
+    color: #ffffff;
+    margin: 12px;
+    padding: 12px 20px;
+}
+.delete-action{
+    background-color: #1d7a46;
+    color: #ffffff;
+    padding: 12px 20px;
+}
 .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 24px; }
 .stat-card { min-height: 142px; display: flex; gap: 14px; padding: 21px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 11px; }
 .stat-icon { flex: 0 0 38px; height: 38px; border-radius: 9px; display: grid; place-items: center; font-size: 16px; font-weight: 800; }
@@ -62,6 +72,8 @@ a { color: inherit; text-decoration: none; }
 .admin-product-price { margin: 0 0 0 auto; color: var(--green-dark); font-size: 13px; font-weight: 700; white-space: nowrap; }
 .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }.compact-panel { min-height: 178px; }.empty-row { display: flex; align-items: center; gap: 10px; min-height: 92px; padding: 0 22px; color: var(--muted); font-size: 13px; }.empty-row span { color: #8a9a8e; font-size: 20px; }.empty-row p { margin: 0; }
 .product-dialog { width: min(650px, calc(100% - 30px)); padding: 0; border: 0; border-radius: 13px; box-shadow: 0 20px 70px #1025183d; color: var(--ink); }.product-dialog::backdrop { background: #1025188a; }.product-form { padding: 26px; }.form-header { display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 22px; border-bottom: 1px solid var(--line); }.form-header h2 { margin: 7px 0 0; font-size: 23px; }.close-dialog { width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; background: #eef2ef; color: #4c5b50; cursor: pointer; font-size: 24px; line-height: 1; }.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; padding: 23px 0 5px; }.form-grid label { display: grid; gap: 7px; color: #364239; font-size: 13px; font-weight: 700; }.form-grid label span { color: var(--muted); font-weight: 400; }.form-grid input, .form-grid textarea { width: 100%; padding: 10px 11px; border: 1px solid #d7ded9; border-radius: 7px; color: var(--ink); background: #fff; font: inherit; font-size: 13px; outline-color: var(--green); }.form-grid input[type="file"] { padding: 8px; font-size: 12px; }.form-grid textarea { resize: vertical; }.full-width { grid-column: 1 / -1; }.form-status { min-height: 19px; margin: 7px 0 0; color: var(--muted); font-size: 12px; }.form-status.error { color: #b42318; }.form-status.success { color: var(--green-dark); }.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 14px; }.cancel-dialog, .submit-product { padding: 11px 16px; border-radius: 7px; cursor: pointer; font-size: 13px; font-weight: 700; }.cancel-dialog { color: #3f4c43; border: 1px solid #d7ded9; background: #fff; }.submit-product { border: 1px solid var(--green); background: var(--green); color: #fff; }.submit-product:disabled { opacity: .65; cursor: wait; }
-
+.admin-product-actions{
+    gap: 10px;
+}
 @media (max-width: 850px) { .sidebar { transform: translateX(-100%); transition: transform .2s ease; z-index: 10; box-shadow: 8px 0 25px #0a1d1026; }.sidebar.open { transform: translateX(0); }.dashboard-main { width: 100%; margin-left: 0; padding: 0 24px 32px; }.menu-toggle { display: block; margin-right: 15px; padding: 6px; border: 0; background: transparent; cursor: pointer; font-size: 22px; }.stats-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .dashboard-main { padding: 0 16px 24px; }.dashboard-header { min-height: 84px; }.dashboard-header h1 { font-size: 20px; }.admin-user > div:last-child { display: none; }.welcome { padding: 28px 0 22px; align-items: flex-start; flex-direction: column; }.welcome h2 { font-size: 25px; }.stats-grid, .two-column, .form-grid { grid-template-columns: 1fr; gap: 12px; }.stat-card { min-height: 118px; }.panel-header { padding: 18px; }.empty-products { min-height: 220px; }.product-form { padding: 20px; } }

@@ -24,6 +24,7 @@ form.addEventListener('submit', async (event) => {
         provider: 'google',
         options: {
             redirectTo: new URL('admin.html', window.location.href).href
+
         }
     });
 
